@@ -1,6 +1,6 @@
 window.onload = function(){
     obtener = () =>{
-        axios.get('http://localhost:8080/read')
+        axios.get('https://crudbpke.herokuapp.com/public/read')
         .then(res=>{
             var tabla = document.getElementById('datos');
             res.data.map(datos=>{
@@ -30,7 +30,7 @@ agregar = () =>{
         "Nombre_usuario": user
     };
 
-    axios.post('http://localhost:8080/create', body)
+    axios.post('https://crudbpke.herokuapp.com/public/create', body)
     .then(res=>console.log('enviado'));
 
     alert('Dato agregado!!');
@@ -51,7 +51,7 @@ actualizarr = () =>{
         "Nombre_usuario": user
     };
 
-    axios.put('http://localhost:8080/update/'+id, body)
+    axios.put('https://crudbpke.herokuapp.com/public/update/'+id, body)
     .then(res=>console.log('enviado'));
 
     alert('Dato Actualizado!!');
@@ -61,7 +61,7 @@ actualizarr = () =>{
 eliminarr = () => {
     var id = document.getElementById('idelete').value;
     
-    axios.delete('http://localhost:8080/delete/'+id)
+    axios.delete('https://crudbpke.herokuapp.com/public/delete/'+id)
     .then(res=>console.log('enviado'));
 
     alert('Dato Eliminado!!');
