@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="js/funciones.js"></script>
+        <script src="js/datos.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <title>Prueba CRUD</title>
+    </head>
+    <body>
+        <div class="container-fluid p-0">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top barnav">
+                <div class="container-fluid row">
+                    <div class="col-lg-3 col-md-3 col-sm-12 text-center">
+                        <span class="text-light">Prueba CRUD</span>
+                    </div>
+                    <div class="col-lg-9 col-md-9 col-sm-12 text-center btn-agregar" onClick="nuevo()">
+                        <span>Crear</span>
+                        <span class="bi-plus-circle text-success" data-bs-toggle="modal" data-bs-target="#datosi"></span>
+                    </div>
+                </div>
+            </nav>
+            <div class="container-flud">
+                <table class="table table-hover">
+                    <thead class="table-light">
+                        <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Correo</th>
+                            <th scope="col">Usuario</th>
+                            <th scope="col" class="text-center">Editar</th>
+                            <th scope="col" class="text-center">Eliminar</th>
+                        </tr>
+                    </thead>
+                    <tbody id="datos">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="modal fade" id="datosi" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="titulo">Agregar Dato</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form" method="post">
+                        <div class="form-group">
+                            <label for="nombre" class="form-label">Nombre</label>
+                            <input type="text" name="nombre" id="nombre" class="form-control" onInput="d_nombre()">
+                        </div>
+                        <div class="form-group">
+                            <label for="correo" class="form-label">Correo</label>
+                            <input type="email" name="correo" id="correo" class="form-control" onInput="d_correo()">
+                        </div>
+                        <div class="form-group">
+                            <label for="nombre" class="form-label">Nombre</label>
+                            <input type="text" name="usuario" id="usuario" class="form-control" onInput="d_usuario()">
+                        </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                        <form method="post">
+                            <input type="hidden" name="idup" id="idup">
+                            <input type="hidden" id="nombred" name="nombred">
+                            <input type="hidden" id="usuariod" name="usuariod">
+                            <input type="hidden" id="correod" name="correod">
+                            <input type="submit" class="btn btn-success" name="guardar" value="Guardar" id="save" onClick="agregar()">
+                            <input type="submit" class="btn btn-success" name="actualizar" value="Actualizar" style="display:none" id="update" onClick="actualizarr()">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="eliminar" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="titdel">Elimniar registro</h4>
+                        <button type="button" class="btn-close" bata-bs-dismiss="modal" aria-label="close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h5>¿Deseas eliminar el registro?</h5>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" name="cancelar" class="btn btn-danger" data-bs-dismiss="modal" aria-label="close">Cancelar</button>
+                        <form method="post">
+                        <input type="hidden" name="idelete" id="idelete">
+                        <input type="submit" name="delete" value="Aceptar" class="btn btn-success" onClick="eliminarr()">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
