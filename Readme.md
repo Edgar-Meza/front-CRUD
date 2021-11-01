@@ -2,16 +2,16 @@
 
 ## Introducción
 
-Aplicación web que realiza operaciones CRUD (Create, Read, Update y Delete), desarrollada con Framework Slim (PHP) para la creación de un API que realizara las operaciones CRUD para la parte del Back-end, HTLM, CSS (Bootstrap) y javaScript (uso de libreria axios para peticiones HTTP), para la parte del Front-end y para la parte de bases de datos se uso el gestor de bases de datos MySQL.
+Aplicación web que realiza operaciones CRUD (Create, Read, Update y Delete), desarrollada con Framework Slim (PHP) para la creación de un API que realizara las operaciones CRUD para la parte del Back-end, HTLM, CSS (Bootstrap) y javaScript (uso de librería axios para peticiones HTTP), para la parte del Front-end y para la parte de bases de datos el gestor de bases de datos MySQL.
 
 ![Página](./assets/page.png "Página muestra")
 
-La aplicacion web funciona mediante peticiones HTTP a un API que se encargara de realizar las operacion CRUD a una base de datos MySQL mediante el lenguaje PHP y con ayuda de JavaScript con la libreria axios de hacen las solicitudes get, post, put y delete desde la interface de usuario.
+La aplicación web funciona mediante peticiones HTTP a un API que se encargara de realizar las operaciones CRUD a una base de datos MySQL mediante el lenguaje PHP y con ayuda de JavaScript con la librería axios que hace las solicitudes get, post, put y delete desde la interfaz de usuario.
 
 
 ## Objetivo
 
-El objetivo principal de esta aplicacion es la realización de las operaciones CRUD a una base de datos desde la web, con apoyo de algun framework de cualquier lenguaje de porgramación que en esta ocacion se decidio trabajar con PHP para la parte del Back-en  y JavaScript para el Fron-end.
+El objetivo principal de esta aplicación es la realización de las operaciones CRUD a una base de datos desde la web, con apoyo de algún framework de cualquier lenguaje de programación que en esta ocasión se decidió trabajar con PHP para la parte del Back-en  y JavaScript para el Fron-end.
 
 ![slim framework](./assets/slim.png "imagen de Slim Framework")
 ![Slim install](./assets/slim-install.png "instalacion de slim")
@@ -27,7 +27,7 @@ Muestra una tabla con los datos ingresados en la base de datos
 
 **Agregar nuevos datos**
 
-Haciendo clic sobre el boton verde de la parte superior de abrira un formaulario en el cual se deberan agregar los datos que deseamos ingresar a la base de datos
+Haciendo clic sobre el botón verde de la parte superior se abrirá un formulario en el cual se deberán agregar los datos que deseamos ingresar a la base de datos
 
 ![boton agregar datos](./assets/btn-create.png "boton agregar datos")
 
@@ -36,7 +36,7 @@ Formulario
 
 **Actualizar datos**
 
-Para actualizar algun dato basta con dar clic sobre el boton azul de la fila donde se encuentre el registro que se modificara, se abrira un formulario con los datos del registro, posteriormente ingresar los nuevos datos que queremos actualizar.
+Para actualizar algún dato basta con dar clic sobre el botón azul de la fila donde se encuentre el registro que se modificara, se abrirá un formulario con los datos del registro, posteriormente ingresar los nuevos datos que queremos actualizar.
 
 ![Boton actualizar](./assets/btn-update.png "Boton para actualizar algun registro")
 
@@ -46,7 +46,7 @@ Formulario actualizar
 
 **Eliminar registro**
 
-Para eliminar un registro de la base de datos bastara con hacer clic sobre el boton rojo de la fila del registro que deseamos eliminar y confirmar si queremos eliminar el registro.
+Para eliminar un registro de la base de datos bastara con hacer clic sobre el botón rojo de la fila del registro que deseamos eliminar y confirmar si queremos eliminar el registro.
 ![Boton de eliminar](./assets/btn-delete.png "Boton eliminar")
 
 Pantalla de confirmación
@@ -57,15 +57,15 @@ Pantalla de confirmación
 
 # Implementación
 
-Para implementar este proyecto en cualquier entorno de desarrollo o produccion y que funcione correctamente sera necerario contar con los siguietes elementos: 
+Para implementar este proyecto en cualquier entorno de desarrollo o producción y que funcione correctamente sera necesario contar con los siguientes elementos: 
 
-- PHP version 7.0 o superior
+- PHP versión 7.0 o superior
 - Gestor de base de datos MySQL
 - Servidor apache
 
 
-Consfiguracion de la base de datos
-Crear una base de dato sen MySQL y dentro crear una tabla llamada usuario con las columnas idusuario, nombre. correo y nombre usuario.
+Configuración de la base de datos
+Crear una base de dato sen MySQL y dentro crear una tabla llamada usuario con las columnas idusuario, nombre, correo y nombre usuario.
 
 ~~~
  CREATE TABLE `usuario` (
@@ -76,7 +76,7 @@ Crear una base de dato sen MySQL y dentro crear una tabla llamada usuario con la
 )
 ~~~
 
-Una vez creada la base de datos se debera configurar el archivo db.php cubicado en la ruta API/src/config/db.php cambiando los parametros de conexion por los que hemos generado en la nueva base de datos 
+Una vez creada la base de datos se deberá configurar el archivo db.php cubicado en la ruta API/src/config/db.php cambiando los parámetros de conexión por los que hemos generado en la nueva base de datos 
 
 ~~~
  <?php
@@ -96,7 +96,7 @@ Una vez creada la base de datos se debera configurar el archivo db.php cubicado 
 
 ~~~
 
-y por ultimo en el archivo datos.js ubicado en docs/js/datos.js bastara con colocar el nombre de dominio para comunicacion con el API, para poder realizar las peticiones HTTP.
+por último en el archivo datos.js ubicado en docs/js/datos.js bastara con colocar el nombre de dominio para comunicación con el API, para poder realizar las peticiones HTTP.
 
 ![Get](./assets/get.png "Peticion get")
 
@@ -106,4 +106,4 @@ y por ultimo en el archivo datos.js ubicado en docs/js/datos.js bastara con colo
 
 ![Delete](./assets/delete.png "Peticion delete")
 
-y listo esa sera la configuracion necesaria para poner en marcha este pequeño proyecto.
+listo esa sera la configuración necesaria para poner en marcha este pequeño proyecto.
