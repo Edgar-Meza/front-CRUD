@@ -1,3 +1,4 @@
+[Demo del proyecto](http://demoedg.ml/)
 # Manual Técnico
 
 ## Introducción
@@ -96,7 +97,7 @@ Una vez creada la base de datos se deberá configurar el archivo db.php cubicado
 
 ~~~
 
-por último en el archivo datos.js ubicado en docs/js/datos.js bastara con colocar el nombre de dominio para comunicación con el API, para poder realizar las peticiones HTTP.
+Por último en el archivo datos.js ubicado en docs/js/datos.js bastara con colocar el nombre de dominio para comunicación con el API, para poder realizar las peticiones HTTP.
 
 ![Get](./assets/get.png "Peticion get")
 
@@ -106,4 +107,4 @@ por último en el archivo datos.js ubicado en docs/js/datos.js bastara con coloc
 
 ![Delete](./assets/delete.png "Peticion delete")
 
-listo esa sera la configuración necesaria para poner en marcha este pequeño proyecto.
+Listo esa sera la configuración necesaria para poner en marcha este pequeño proyecto.
